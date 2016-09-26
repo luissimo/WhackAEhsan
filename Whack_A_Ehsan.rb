@@ -75,12 +75,12 @@ class WhackAEhsan < Gosu::Window
         @font.draw('Serieus, niet eens 10 punten?', 210, 100, 3)
         @font.draw('Druk op de spatieknop om je eer te herstellen', 110, 200, 3)
         @visible = 0
-      elsif @score == (20...50)
-        @font.draw('Mwah, kan beter...', 210, 100, 3)
+      elsif @score.between?(20, 50)
+        @font.draw('Mwah, kan beter...', 300, 100, 3)
         @font.draw('Druk op de spatieknop om opnieuw te spelen', 110, 200, 3)
         @visible = 0
-      elsif @score == (50...100)
-        @font.draw('Pit Pit Pit!!', 210, 100, 3) 
+      elsif @score.between?(50,100)
+        @font.draw('Pit Pit Pit!!', 300, 100, 3) 
         @font.draw('Druk op de spatieknop om nog een keer te spelen', 110, 200, 3) 
         @visible = 0
       end  
